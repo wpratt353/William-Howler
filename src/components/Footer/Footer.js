@@ -1,13 +1,10 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import {
-} from './style'
+import {} from "./style"
 
 const Footer = () => {
-  return (
-    
-  )
+  return <div>Footer</div>
 }
 
 export default Footer

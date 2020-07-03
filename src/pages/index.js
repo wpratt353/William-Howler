@@ -1,22 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../helpers/seo"
+import Header from "../components/Header"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = ({ data }) => {
+  const { edges } = data.allMarkdownRemark
+
+  return (
+    <>
+      <SEO title="Home" />
+      <Header />
+    </>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      limit: 6
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 75)
+          frontmatter {
+            title
+            path
+            tags
+            date(formatString: "MM.DD.YYYY")
+            cover {
+              childImageSharp {
+                fluid(
+                  maxWidth: 1000
+                  quality: 90
+                  traceSVG: { color: "#2B2B2F" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
