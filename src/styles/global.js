@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${({ theme }) => theme.fonts.serif};
+    font-family: ${({ theme }) => theme.fonts.sans};
   }
 
   article, aside, details, figcaption, figure,
@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     transition: all ease-in-out 0.2s;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.teal};
 
     :hover {
       color: ${({ theme }) => theme.colors.green};
@@ -127,58 +127,6 @@ const GlobalStyle = createGlobalStyle`
     &:invalid {
       box-shadow: none;
     }
-  }
-
-  /*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-  html.has-scroll-smooth {
-    overflow: hidden; 
-  }
-  html.has-scroll-dragging {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; 
-  }
-  .has-scroll-smooth body {
-    overflow: hidden; 
-  }
-  .has-scroll-smooth [data-scroll-container] {
-    min-height: 100vh; 
-  }
-  .c-scrollbar {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 11px;
-    height: 100vh;
-    transform-origin: center right;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 0; 
-  }
-  .c-scrollbar:hover {
-    transform: scaleX(1.45); 
-  }
-  .c-scrollbar:hover, 
-  .has-scroll-scrolling .c-scrollbar, 
-  .has-scroll-dragging .c-scrollbar {
-    opacity: 1;
-  }
-  .c-scrollbar_thumb {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.5;
-    width: 7px;
-    border-radius: 10px;
-    margin: 2px;
-    cursor: -webkit-grab;
-    cursor: grab;
-    z-index: 99999;
-  }
-  .has-scroll-dragging .c-scrollbar_thumb {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
   }
 `
 export default GlobalStyle

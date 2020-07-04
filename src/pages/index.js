@@ -1,16 +1,18 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import SEO from "../helpers/seo"
-import Header from "../components/Header"
+import SEO from '../helpers/seo'
+import Header from '../components/Header'
+import Hero from '../components/Hero'
 
 const IndexPage = ({ data }) => {
   const { edges } = data.allMarkdownRemark
 
   return (
     <>
-      <SEO title="Home" />
+      <SEO title='Home' />
       <Header />
+      <Hero />
     </>
   )
 }
