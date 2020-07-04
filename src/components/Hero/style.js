@@ -1,4 +1,10 @@
 import styled from "styled-components"
-import BackgroundImage from "gatsby-background-image"
 
-export const SliderWrap = styled(div)``
+export const HeroWrap = styled.div`
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: ${props => props.theme.colors.teal};
+`

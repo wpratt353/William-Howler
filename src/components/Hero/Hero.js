@@ -1,8 +1,11 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
 
-import {} from "./style"
+import { HeroWrap } from "./style"
 
 export default function Hero() {
-  return <>Testi</>
+  return (
+    <HeroWrap>
+      test
+    </HeroWrap>
+  )
 }
