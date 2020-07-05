@@ -31,6 +31,7 @@ export const LogoWrap = styled.div`
       left: 0.6rem;
       letter-spacing: -3px;
       transition: opacity 0.4s;
+      color: ${(props) => props.theme.colors.tan};
 
       span {
         position: fixed;
