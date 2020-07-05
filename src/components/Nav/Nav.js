@@ -36,7 +36,7 @@ class Nav extends React.Component {
           </MenuButton>
           <nav className="nav">
             <div>
-              Back to top<span>-></span>
+              Back to top<span></span>
             </div>
             <div>
               <a href="#">Fb</a>
