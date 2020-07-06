@@ -40,7 +40,6 @@ export const NavFlex = styled.div`
       opacity: 0;
       -webkit-transition: all 0.4s;
       transition: all 0.4s;
-      pointer-events: none;
       color: ${(props) => props.theme.colors.tan};
       white-space: nowrap;
       padding-top: 2.5rem;
