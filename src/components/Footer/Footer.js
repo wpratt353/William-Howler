@@ -23,7 +23,7 @@ const Footer = () => {
           -
           <br />
           <Link to="#">Designed and built by NAME_HERE</Link>
-          <br />© 2020 William Joseph | All Rights Reserved
+          <br />© 2020 William Howler | All Rights Reserved
         </Col>
       </Row>
     </FooterWrap>
