@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
 import { NavWrap, NavFlex, MenuButton } from './style'
 
@@ -35,9 +38,12 @@ class Nav extends React.Component {
             <span></span>
           </MenuButton>
           <nav className="nav">
-            <div>
-              Back to top<span></span>
-            </div>
+            <Link to="/" className="backToTop">
+              Back to top
+              <span>
+                <FontAwesomeIcon icon={faLongArrowAltRight} />
+              </span>
+            </Link>
             <div>
               <a href="#">Fb</a>
               <a href="#">Tw</a>

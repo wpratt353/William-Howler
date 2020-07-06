@@ -31,12 +31,7 @@ export const NavFlex = styled.div`
     text-align: center;
     align-items: center;
 
-    a {
-      display: flex;
-      color: ${(props) => props.theme.colors.tan};
-      font-weight: 600;
-    }
-    div:first-of-type {
+    .backToTop {
       opacity: 0;
       -webkit-transform: rotate(270deg) translate(0, 0%);
       transform: rotate(270deg) translate(0, 0%);
@@ -48,19 +43,33 @@ export const NavFlex = styled.div`
       pointer-events: none;
       color: ${(props) => props.theme.colors.tan};
       white-space: nowrap;
-      padding-top: 2rem;
+      padding-top: 2.5rem;
       position: absolute;
       bottom: 0;
+
+      span {
+        padding-left: 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    div a {
+      display: flex;
+      color: ${(props) => props.theme.colors.tan};
+      font-weight: 600;
     }
   }
   .nav-back-to-top {
-    div:first-of-type {
+    .backToTop {
       opacity: 1;
       transition: opacity 0.4s;
-      cursor: default;
+      cursor: pointer;
+      z-index: 999;
     }
-    div:last-of-type {
+    div {
       opacity: 0;
+      position: absolute;
+      bottom: -400px;
       transition: opacity 0.4s;
     }
   }
