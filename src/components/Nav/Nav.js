@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { animateScroll as scroll } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -38,7 +39,12 @@ class Nav extends React.Component {
             <span></span>
           </MenuButton>
           <nav className="nav">
-            <Link to="/" className="backToTop">
+            <Link
+              className="backToTop"
+              onClick={this.scrollToTop}
+              smooth={true}
+              duration={800}
+            >
               Back to top
               <span>
                 <FontAwesomeIcon icon={faLongArrowAltRight} />
