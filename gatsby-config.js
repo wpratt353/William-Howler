@@ -10,7 +10,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-remark`,
     `babel-plugin-styled-components`,
-
+    `gatsby-background-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
