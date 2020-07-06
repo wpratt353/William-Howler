@@ -27,4 +27,17 @@ export const FooterWrap = styled(Container)`
       }
     }
   }
+
+  @media (max-width: 1278px) {
+    padding-left: 4rem;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 6rem;
+    .row {
+      .align-right {
+        text-align: left;
+      }
+    }
+  }
 `
