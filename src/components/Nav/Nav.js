@@ -64,10 +64,4 @@ class Nav extends React.Component {
   }
 }
 
-/* const Nav = () => {
-  return (
-    
-  )
-} */
-
 export default Nav

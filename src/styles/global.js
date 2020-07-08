@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -39,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
     flex: 1 0 auto;
     position: relative;
     z-index: 2;
-    margin-bottom: 75vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
