@@ -18,6 +18,10 @@ export const ServicesWrap = styled.div`
     }
   }
 
+  .slick-slider {
+    cursor: url('cursor/1.svg'), auto;
+  }
+
   .sliderSection {
     padding: 0 3rem;
     border-left: 1px solid #4d6b6a;
