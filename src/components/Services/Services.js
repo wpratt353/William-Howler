@@ -21,7 +21,7 @@ class Services extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 2.2,
       slidesToScroll: 2,
       arrows: false,
     }
@@ -29,10 +29,10 @@ class Services extends Component {
       <ServicesWrap>
         <Container>
           <Row>
-            <Col md={12} lg={4}>
+            <Col md={12} lg={3}>
               <h4>Services</h4>
             </Col>
-            <Col md={12} lg={8}>
+            <Col md={12} lg={9}>
               <Slider {...settings}>
                 <div className="sliderSection">
                   <h1>3D Rendering</h1>
