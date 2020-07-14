@@ -24,12 +24,29 @@ class Services extends Component {
       slidesToShow: 2.2,
       slidesToScroll: 2,
       arrows: false,
+
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     }
     return (
       <ServicesWrap>
         <Container>
           <Row>
-            <Col md={12} lg={3}>
+            <Col className="column-left" md={12} lg={3}>
               <h4>Services</h4>
             </Col>
             <Col md={12} lg={9}>

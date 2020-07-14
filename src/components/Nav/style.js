@@ -44,7 +44,7 @@ export const NavFlex = styled.div`
       white-space: nowrap;
       padding-top: 2.5rem;
       position: absolute;
-      bottom: 0;
+      bottom: -200px;
 
       span {
         padding-left: 1rem;
@@ -52,6 +52,11 @@ export const NavFlex = styled.div`
       }
     }
 
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     div a {
       display: flex;
       color: ${(props) => props.theme.colors.tan};
@@ -64,6 +69,7 @@ export const NavFlex = styled.div`
       transition: opacity 0.4s;
       cursor: pointer;
       z-index: 999;
+      bottom: 0;
     }
     div {
       opacity: 0;

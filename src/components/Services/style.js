@@ -6,15 +6,23 @@ export const ServicesWrap = styled.div`
   padding: 10rem 0 10rem 0;
   background-color: ${(props) => props.theme.colors.green};
 
-  .container {
-    padding-left: 0;
+  @media (max-width: 991px) {
+    padding: 5rem 0;
 
-    @media (max-width: 1278px) {
+    .column-left {
+      padding-bottom: 3rem;
+    }
+  }
+
+  .container {
+    @media (max-width: 1290px) {
+      padding-left: 5rem;
+    }
+    @media (max-width: 991px) {
       padding-left: 4rem;
     }
-
     @media (max-width: 768px) {
-      padding-left: 6rem;
+      padding-left: 5.5rem;
     }
   }
 
@@ -25,6 +33,11 @@ export const ServicesWrap = styled.div`
   .sliderSection {
     padding: 0 3rem;
     border-left: 1px solid #4d6b6a;
+
+    @media (max-width: 768px) {
+      border-left: 0;
+      padding: 0;
+    }
 
     a {
       color: ${(props) => props.theme.colors.tan};
@@ -59,17 +72,15 @@ export const ServicesWrap = styled.div`
   h1 {
     color: ${(props) => props.theme.colors.tan};
     margin-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 1.25rem;
+    }
   }
 
   h4 {
     color: ${(props) => props.theme.colors.white};
     font-size: 1.25rem;
-  }
-  .slick-track .slick-slide:nth-of-type(2) .services-image {
-    margin-top: 1.49rem;
-  }
-  .slick-track .slick-slide:nth-of-type(4) .services-image {
-    margin-top: 2.9rem;
   }
 `
 export const StyledBackground = styled(BackgroundImage)`
@@ -79,4 +90,8 @@ export const StyledBackground = styled(BackgroundImage)`
   background-size: cover;
   background-position: center;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    height: 18rem;
+  }
 `
