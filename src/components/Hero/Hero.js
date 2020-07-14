@@ -6,6 +6,12 @@ import Col from 'react-bootstrap/Col'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faLongArrowAltRight,
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons'
 
 import { HeroWrap, StyledBackground, StyledArrows } from './style'
 
@@ -32,12 +38,25 @@ class Hero extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     }
+
     return (
       <HeroWrap>
         <Container fluid>
           <Row>
-            <Col xs={12} md={6}>
-              1
+            <Col className="hero-left" xs={12} md={6}>
+              <div>
+                <h1>
+                  <span>Metal Inspired</span>
+                  <span>Furniture</span>
+                </h1>
+
+                <button>
+                  get in touch
+                  <span>
+                    <FontAwesomeIcon icon={faLongArrowAltRight} />
+                  </span>
+                </button>
+              </div>
             </Col>
 
             <Col xs={12} md={6}>
@@ -64,10 +83,12 @@ class Hero extends Component {
 
               <StyledArrows>
                 <button className="button" onClick={this.previous}>
-                  Previous
+                  <span>
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                  </span>
                 </button>
                 <button className="button" onClick={this.next}>
-                  Next
+                  <FontAwesomeIcon icon={faChevronRight} />
                 </button>
               </StyledArrows>
             </Col>
