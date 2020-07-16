@@ -3,10 +3,19 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
-import BackgroundImage from 'gatsby-background-image'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-import { AboutWrap, StyledCol } from './style'
+import {
+  AboutWrap,
+  SmallCol,
+  StyledCol,
+  SmallImage,
+  TallImage,
+  MidImage,
+  BlockQuote,
+} from './style'
+
+import CTA from '../CTA'
 
 class About extends Component {
   render() {
@@ -16,14 +25,13 @@ class About extends Component {
         <Container>
           <Row>
             <StyledCol sm={12} lg={6}>
-              <div className="small-col">
+              <SmallCol>
                 <Link to="#">
-                  <BackgroundImage
+                  <SmallImage
                     fadeIn
                     Tag="div"
-                    className="about-image small-image"
                     fluid={data.about1.childImageSharp.fluid}
-                  ></BackgroundImage>
+                  ></SmallImage>
                   <h4>
                     NU Creative - London
                     <span>
@@ -31,16 +39,15 @@ class About extends Component {
                     </span>
                   </h4>
                 </Link>
-              </div>
+              </SmallCol>
             </StyledCol>
             <StyledCol sm={12} lg={6}>
               <Link to="#">
-                <BackgroundImage
+                <TallImage
                   fadeIn
                   Tag="div"
-                  className="about-image tall-image"
                   fluid={data.about2.childImageSharp.fluid}
-                ></BackgroundImage>
+                ></TallImage>
                 <h4>
                   Just a COVID screen? How about a long term solution.
                   <span>
@@ -53,12 +60,11 @@ class About extends Component {
           <Row>
             <StyledCol sm={12} lg={6}>
               <Link to="#">
-                <BackgroundImage
+                <MidImage
                   fadeIn
                   Tag="div"
-                  className="about-image mid-image"
                   fluid={data.about3.childImageSharp.fluid}
-                ></BackgroundImage>
+                ></MidImage>
                 <h4>
                   Hex - A conceptual shelving unit
                   <span>
@@ -67,7 +73,7 @@ class About extends Component {
                 </h4>
               </Link>
             </StyledCol>
-            <StyledCol className="block-quote" sm={12} lg={6}>
+            <BlockQuote sm={12} lg={6}>
               <h3>
                 "Exactly what we wanted. Great product and helpful guys, would
                 highly recommend"
@@ -75,13 +81,8 @@ class About extends Component {
                 <br />
                 Summit Campers
               </h3>
-              <Link to="#">
-                What we do
-                <span>
-                  <FontAwesomeIcon icon={faLongArrowAltRight} />
-                </span>
-              </Link>
-            </StyledCol>
+              <CTA>What we do</CTA>
+            </BlockQuote>
           </Row>
         </Container>
       </AboutWrap>

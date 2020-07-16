@@ -22,47 +22,6 @@ export const NavFlex = styled.div`
   align-items: center;
   justify-content: center;
 
-  nav {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    flex-direction: column;
-    padding-bottom: 1.25rem;
-    text-align: center;
-    align-items: center;
-
-    .backToTop {
-      opacity: 0;
-      -webkit-transform: rotate(270deg) translate(0, 0%);
-      transform: rotate(270deg) translate(0, 0%);
-      -webkit-transform-origin: top left;
-      transform-origin: top left;
-      opacity: 0;
-      -webkit-transition: all 0.4s;
-      transition: all 0.4s;
-      color: ${(props) => props.theme.colors.tan};
-      white-space: nowrap;
-      padding-top: 2.5rem;
-      position: absolute;
-      bottom: -200px;
-
-      span {
-        padding-left: 1rem;
-        font-size: 1rem;
-      }
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    div a {
-      display: flex;
-      color: ${(props) => props.theme.colors.tan};
-      font-weight: 600;
-    }
-  }
   .nav-back-to-top {
     .backToTop {
       opacity: 1;
@@ -77,6 +36,48 @@ export const NavFlex = styled.div`
       bottom: -400px;
       transition: opacity 0.4s;
     }
+  }
+`
+
+export const StyledNav = styled.nav`
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  padding-bottom: 1.25rem;
+  text-align: center;
+  align-items: center;
+
+  .backToTop {
+    opacity: 0;
+    -webkit-transform: rotate(270deg) translate(0, 0%);
+    transform: rotate(270deg) translate(0, 0%);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    opacity: 0;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    color: ${(props) => props.theme.colors.tan};
+    white-space: nowrap;
+    padding-top: 2.5rem;
+    position: absolute;
+    bottom: -200px;
+
+    span {
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div a {
+    display: flex;
+    color: ${(props) => props.theme.colors.tan};
+    font-weight: 600;
   }
 `
 

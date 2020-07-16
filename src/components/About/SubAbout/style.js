@@ -5,16 +5,12 @@ export const SubAboutWrap = styled.div`
   padding: 10rem 0 10rem 0;
   color: ${(props) => props.theme.colors.teal};
 
+  @media (max-width: 1025px) {
+    padding-bottom: 5rem;
+  }
+
   .container {
-    padding-left: 0;
-
-    @media (max-width: 1278px) {
-      padding-left: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      padding-left: 6rem;
-    }
+    padding-left: 5rem;
   }
 
   h1 {
@@ -23,5 +19,9 @@ export const SubAboutWrap = styled.div`
 
   h4 {
     font-size: 1.25rem;
+
+    @media (max-width: 991px) {
+      margin-bottom: 3rem;
+    }
   }
 `
