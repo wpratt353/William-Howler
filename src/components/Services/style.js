@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export const ServicesWrap = styled.div`
   position: relative;
@@ -26,47 +29,39 @@ export const ServicesWrap = styled.div`
     }
   }
 
-  .slick-slider {
-    cursor: url('cursor/1.svg'), auto;
-  }
-
-  .sliderSection {
-    padding: 0 3rem;
-    border-left: 1px solid #4d6b6a;
-
-    @media (max-width: 768px) {
-      border-left: 0;
-      padding: 0;
-    }
-
-    a {
-      color: ${(props) => props.theme.colors.tan};
-      display: inline-flex;
-      align-items: center;
-      margin: 3rem auto 3rem 0;
-      padding: 0.75rem;
-      line-height: 1;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-      text-transform: lowercase;
-
-      span {
-        padding-left: 15px;
-        transition: all 0.4s;
-      }
-
-      :hover {
-        padding-right: 1.5rem;
-
-        span {
-          transform: translate(0.5rem, 0);
-        }
-      }
-    }
-  }
-
-  p {
+  h4 {
     color: ${(props) => props.theme.colors.white};
+    font-size: 1.25rem;
+  }
+
+  .slick-track,
+  .slick-list {
+    display: flex;
+  }
+
+  .slick-slide,
+  .slick-slide div:first-child {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+`
+
+export const StyledSlider = styled(Slider)`
+  cursor: url('./cursor/1.png'), auto;
+`
+
+export const SliderSection = styled.div`
+  padding: 0 3rem;
+  border-left: 1px solid #4d6b6a;
+
+  :focus,
+  :active {
+    border-left: 1px solid #4d6b6a;
+  }
+
+  @media (max-width: 768px) {
+    border-left: 0;
+    padding: 0;
   }
 
   h1 {
@@ -78,11 +73,15 @@ export const ServicesWrap = styled.div`
     }
   }
 
-  h4 {
+  p {
     color: ${(props) => props.theme.colors.white};
-    font-size: 1.25rem;
+  }
+
+  a {
+    display: flex;
   }
 `
+
 export const StyledBackground = styled(BackgroundImage)`
   width: 100%;
   height: 14rem;
@@ -90,6 +89,8 @@ export const StyledBackground = styled(BackgroundImage)`
   background-size: cover;
   background-position: center;
   z-index: 1;
+  display: flex;
+  align-self: flex-end;
 
   @media (max-width: 768px) {
     height: 18rem;

@@ -5,23 +5,27 @@ export const SubAboutWrap = styled.div`
   padding: 10rem 0 10rem 0;
   color: ${(props) => props.theme.colors.teal};
 
+  @media (max-width: 1025px) {
+    padding-bottom: 5rem;
+  }
+
   .container {
-    padding-left: 0;
-
-    @media (max-width: 1278px) {
-      padding-left: 4rem;
-    }
-
-    @media (max-width: 768px) {
-      padding-left: 6rem;
-    }
+    padding-left: 5rem;
   }
 
   h1 {
     font-size: ${(props) => props.theme.fontSize.xlarge};
+
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
   }
 
   h4 {
     font-size: 1.25rem;
+
+    @media (max-width: 991px) {
+      margin-bottom: 3rem;
+    }
   }
 `

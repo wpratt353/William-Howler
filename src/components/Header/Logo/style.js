@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 export const LogoWrap = styled.div`
-  color: white;
-
   .logo {
     line-height: 1;
     font-size: 1.5rem;
+    color: white;
+
     div:first-of-type {
       font-size: 2rem;
+      position: relative;
 
       span {
         display: block;
@@ -40,3 +41,5 @@ export const LogoWrap = styled.div`
     }
   }
 `
+
+export const Logo = styled.div``

@@ -3,7 +3,7 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
 
-import { NavWrap, NavFlex, MenuButton } from './style'
+import { NavWrap, NavFlex, StyledNav, MenuButton } from './style'
 
 class Nav extends React.Component {
   componentDidMount() {
@@ -37,7 +37,7 @@ class Nav extends React.Component {
             <span></span>
             <span></span>
           </MenuButton>
-          <nav className="nav">
+          <StyledNav className="nav">
             <Link
               className="backToTop"
               to="gatsby-focus-wrapper"
@@ -57,7 +57,7 @@ class Nav extends React.Component {
               <a href="#">In</a>
               <a href="#">Li</a>
             </div>
-          </nav>
+          </StyledNav>
         </NavFlex>
       </NavWrap>
     )

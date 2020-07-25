@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import { LogoWrap } from './style'
 
@@ -28,14 +29,14 @@ class Logo extends React.Component {
   render() {
     return (
       <LogoWrap>
-        <div className="logo">
+        <Link to="#" className="logo">
           <div>
             William<span>Howler</span>
           </div>
           <div>
             W<span>H</span>
           </div>
-        </div>
+        </Link>
       </LogoWrap>
     )
   }

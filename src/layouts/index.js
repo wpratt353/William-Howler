@@ -14,11 +14,13 @@ import theme from '../styles/theme'
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <div className="siteContent">{children}</div>
-      <SubAbout />
-      <About />
-      <Services />
-      <SubFooter />
+      <div className="siteContent">
+        {children}
+        <SubAbout />
+        <About />
+        <Services />
+        <SubFooter />
+      </div>
       <Footer />
       <GlobalStyle />
     </ThemeProvider>

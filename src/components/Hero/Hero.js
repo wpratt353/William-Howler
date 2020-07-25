@@ -1,19 +1,23 @@
 import React, { Component } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import { Container, Row, Col } from 'react-bootstrap'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faLongArrowAltRight,
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons'
 
-import { HeroWrap, StyledBackground, StyledArrows } from './style'
+import {
+  HeroWrap,
+  HeroLeft,
+  HeroRight,
+  StyledBackground,
+  StyledArrows,
+} from './style'
+import CTA from '../CTA'
 
 class Hero extends Component {
   constructor(props) {
@@ -31,6 +35,9 @@ class Hero extends Component {
   render() {
     const { data } = this.props
     const settings = {
+      autoplaySpeed: 4000,
+      autoplay: true,
+      fade: true,
       dots: false,
       arrows: false,
       infinite: true,
@@ -43,23 +50,20 @@ class Hero extends Component {
       <HeroWrap>
         <Container fluid>
           <Row>
-            <Col className="hero-left" xs={12} md={6}>
+            <HeroLeft md={12} lg={6}>
               <div>
                 <h1>
                   <span>Metal Inspired</span>
                   <span>Furniture</span>
                 </h1>
-
-                <button>
-                  get in touch
-                  <span>
-                    <FontAwesomeIcon icon={faLongArrowAltRight} />
-                  </span>
-                </button>
+                <CTA border="#afa88c">what we do</CTA>
               </div>
-            </Col>
+            </HeroLeft>
 
-            <Col xs={12} md={6}>
+            <HeroRight md={12} lg={6}>
+              <CTA background="white" mobile="none">
+                get in touch
+              </CTA>
               <Slider ref={(c) => (this.slider = c)} {...settings}>
                 <StyledBackground
                   fadeIn
@@ -90,8 +94,11 @@ class Hero extends Component {
                 <button className="button" onClick={this.next}>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </button>
+                <div>
+                  <div></div>
+                </div>
               </StyledArrows>
-            </Col>
+            </HeroRight>
           </Row>
         </Container>
       </HeroWrap>
