@@ -3,13 +3,16 @@ import { graphql, StaticQuery } from 'gatsby'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 
-import { ServicesWrap, SliderSection, StyledBackground } from './style'
+import {
+  ServicesWrap,
+  StyledSlider,
+  SliderSection,
+  StyledBackground,
+} from './style'
 
 import CTA from '../CTA'
+import ProgressBar from '../ProgressBar'
 
 class Services extends Component {
   constructor(props) {
@@ -50,7 +53,7 @@ class Services extends Component {
               <h4>Services</h4>
             </Col>
             <Col md={12} lg={9}>
-              <Slider {...settings}>
+              <StyledSlider {...settings}>
                 <SliderSection>
                   <h1>3D Rendering</h1>
                   <p>
@@ -109,7 +112,8 @@ class Services extends Component {
                     fluid={data.services4.childImageSharp.fluid}
                   />
                 </SliderSection>
-              </Slider>
+                {/* <ProgressBar />  */}
+              </StyledSlider>
             </Col>
           </Row>
         </Container>

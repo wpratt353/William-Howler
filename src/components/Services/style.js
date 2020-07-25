@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export const ServicesWrap = styled.div`
   position: relative;
@@ -26,27 +29,25 @@ export const ServicesWrap = styled.div`
     }
   }
 
-  .slick-slider {
-    cursor: url('cursor/1.svg'), auto;
-  }
-
-  p {
-    color: ${(props) => props.theme.colors.white};
-  }
-
-  h1 {
-    color: ${(props) => props.theme.colors.tan};
-    margin-bottom: 3rem;
-
-    @media (max-width: 1024px) {
-      margin-bottom: 1.25rem;
-    }
-  }
-
   h4 {
     color: ${(props) => props.theme.colors.white};
     font-size: 1.25rem;
   }
+
+  .slick-track,
+  .slick-list {
+    display: flex;
+  }
+
+  .slick-slide,
+  .slick-slide div:first-child {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+`
+
+export const StyledSlider = styled(Slider)`
+  cursor: url('./cursor/1.png'), auto;
 `
 
 export const SliderSection = styled.div`
@@ -62,6 +63,23 @@ export const SliderSection = styled.div`
     border-left: 0;
     padding: 0;
   }
+
+  h1 {
+    color: ${(props) => props.theme.colors.tan};
+    margin-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  p {
+    color: ${(props) => props.theme.colors.white};
+  }
+
+  a {
+    display: flex;
+  }
 `
 
 export const StyledBackground = styled(BackgroundImage)`
@@ -71,6 +89,8 @@ export const StyledBackground = styled(BackgroundImage)`
   background-size: cover;
   background-position: center;
   z-index: 1;
+  display: flex;
+  align-self: flex-end;
 
   @media (max-width: 768px) {
     height: 18rem;

@@ -15,6 +15,10 @@ export const SubAboutWrap = styled.div`
 
   h1 {
     font-size: ${(props) => props.theme.fontSize.xlarge};
+
+    @media (max-width: 991px) {
+      font-size: 2.5rem;
+    }
   }
 
   h4 {

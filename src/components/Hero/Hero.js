@@ -35,6 +35,9 @@ class Hero extends Component {
   render() {
     const { data } = this.props
     const settings = {
+      autoplaySpeed: 4000,
+      autoplay: true,
+      fade: true,
       dots: false,
       arrows: false,
       infinite: true,
@@ -91,6 +94,9 @@ class Hero extends Component {
                 <button className="button" onClick={this.next}>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </button>
+                <div>
+                  <div></div>
+                </div>
               </StyledArrows>
             </HeroRight>
           </Row>
