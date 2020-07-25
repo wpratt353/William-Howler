@@ -21,7 +21,7 @@ export const HeroWrap = styled.div`
   padding-left: 4rem;
 
   @media (max-width: 991px) {
-    height: 141.1vh;
+    height: 147.7vh;
   }
 `
 
@@ -90,7 +90,6 @@ export const HeroRight = styled(Col)`
 `
 
 export const StyledArrows = styled.div`
-  background-color: ${(props) => props.theme.colors.white};
   width: 100%;
   height: 5rem;
   bottom: 6px;

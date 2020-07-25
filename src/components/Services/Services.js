@@ -12,7 +12,6 @@ import {
 } from './style'
 
 import CTA from '../CTA'
-import ProgressBar from '../ProgressBar'
 
 class Services extends Component {
   constructor(props) {
@@ -112,7 +111,6 @@ class Services extends Component {
                     fluid={data.services4.childImageSharp.fluid}
                   />
                 </SliderSection>
-                {/* <ProgressBar />  */}
               </StyledSlider>
             </Col>
           </Row>
