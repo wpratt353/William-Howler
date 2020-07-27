@@ -22,7 +22,7 @@ const Footer = () => {
         <Col className="align-right" md={4}>
           -
           <br />
-          <Link to="#">Designed and built by NAME_HERE</Link>
+          <Link to="#">Designed and built by Will Pratt</Link>
           <br />© 2020 William Howler | All Rights Reserved
         </Col>
       </Row>

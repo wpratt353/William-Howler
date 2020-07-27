@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
     width: 100%; 
     height: 100%;
   }
+  #gatsby-focus-wrapper {
+    overflow-x: hidden;
+  }
   .siteRoot {
     display: flex;
     flex-direction: column;
